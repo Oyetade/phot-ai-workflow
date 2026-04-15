@@ -1,0 +1,14 @@
+# Runtime dependencies — canonical versions live in pyproject.toml.
+# Install via: pip install -e .
+# Or directly: pip install -r requirements.txt
+numpy>=1.26,<3
+pandas>=2.2,<3
+Pillow>=10.4,<12
+opencv-python>=4.10,<5
+torch>=2.6,<3
+transformers>=4.45,<5.0
+scikit-learn>=1.5,<2
+imagehash>=4.3,<5
+requests>=2.32,<3
+gradio>=4.44,<6
+python-dotenv>=1.0,<2

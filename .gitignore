@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+coverage.xml
+nosetests.xml
+
+# Type checkers / linters
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# Secrets
+.env
+
+# Pipeline outputs (generated at runtime, not source)
+workflow_outputs*/
+**/workflow_outputs*/
+final_shortlist.csv
+stage1_technical.csv
+stage2_aesthetic.csv
+stage2_scene_clusters.csv
+stage3_ai_review.csv
+*.log
+
+# SQLite dedup index
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+
+# OS / editor artefacts
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+*.bak
+.vscode/
