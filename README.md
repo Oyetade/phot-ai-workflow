@@ -2,6 +2,10 @@
 
 A raw shoot gives you thousands of frames. This pipeline takes them down to a curated shortlist — automatically rejecting blurry shots, duplicates, and poor exposures, then ranking survivors by aesthetic quality using CLIP, and finally running an optional AI vision review (eyes closed, distracting elements, composition). A 2 000-image card typically produces a reviewed shortlist of ~100–200 keepers in under 15 minutes on CPU.
 
+## ⚡ Getting Started
+
+**First time?** See [INSTALL.md](INSTALL.md) for step-by-step setup including Ollama, PyTorch, and system requirements.
+
 ## Pipeline stages
 
 | Stage | What it does | Key flags |
@@ -35,17 +39,22 @@ Also includes K-Means scene clustering on CLIP embeddings and a Gradio human rev
 
 ## Setup
 
+**See [INSTALL.md](INSTALL.md) for full setup instructions** including Ollama, PyTorch selection, and troubleshooting.
+
+Quick reference (after prerequisites are installed):
+
 ```powershell
 cd photo_ai_workflow
-
-# Install PyTorch first (CPU-only is fine; swap the URL for a CUDA index if you have a GPU)
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-
-# Install the package and all other dependencies
 pip install -e .
+```
 
-# Set up secrets (only needed for --provider openai)
+For OpenAI Stage 3 only:
+```powershell
 copy .env.example .env
+# Edit .env and add your OPENAI_API_KEY
 ```
 
 ## Run pipeline
